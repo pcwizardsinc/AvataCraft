@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --orbis-window: #1c1d20;
+    --orbis-panel: #232528;
+    --orbis-button: #2c2e33;
+    --orbis-pressed: #25272b;
+    --orbis-border: #383b41;
+    --orbis-border-hover: #4a4e56;
+    --orbis-menubar: #18191b;
+    --orbis-surround: #141516;
+    --orbis-text: #e6e6e6;
+    --orbis-text-dim: #a0a4ab;
+    --orbis-text-disabled: #565a61;
+    --orbis-icon: #b9bec6;
+    --orbis-accent: #f5a04a;
+    --orbis-accent-soft: #3d2c1c;
+    --orbis-clip-video: #3b5873;
+    --orbis-clip-audio: #2f6f6b;
+    --orbis-clip-overlay: #5e4a80;
+    --orbis-waveform: #cfd6dd;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--orbis-window);
+    color: var(--orbis-text);
+    font-family: 'Inter', 'Cantarell', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+}
+
+/* Authentic Qt6 orbis-reframe Ember horizontal slider */
+input[type='range'].orbis-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--orbis-border);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='range'].orbis-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #cfd6dd;
+  border: 1px solid #18191b;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+input[type='range'].orbis-slider::-webkit-slider-thumb:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+input[type='range'].orbis-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #cfd6dd;
+  border: 1px solid #18191b;
+  cursor: pointer;
+}
+
+/* Subtle Qt-style scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--orbis-window);
+}
+::-webkit-scrollbar-thumb {
+  background: #383b41;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4e56;
+}

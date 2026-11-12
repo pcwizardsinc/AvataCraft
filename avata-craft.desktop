@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Avata-Craft
+Comment=Avata 360 Video Editor & Motion Tracking Studio
+Exec=bash -c "cd $(dirname %k) && ./run-linux.sh"
+Icon=video-display
+Terminal=true
+Type=Application
+Categories=AudioVideo;Video;AudioVideoEditing;Graphics;
+Keywords=DJI;Avata;360;Video;Editor;FPV;Telemetry;Drone;
+StartupNotify=true

@@ -1,0 +1,6 @@
+{
+  "name": "Avata-Craft",
+  "description": "Avata 360 Video Editor with multitrack timeline, spherical keyframe reframing, FPV telemetry HUD generator, horizon stabilization, and intelligent motion tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
