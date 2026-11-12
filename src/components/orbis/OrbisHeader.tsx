@@ -293,6 +293,38 @@ export const OrbisHeader: React.FC<OrbisHeaderProps> = ({
 
               <div style={{ borderColor: theme.border }} className="my-1 border-t" />
 
+              <a
+                href="/DangTree.OSV"
+                download="DangTree.OSV"
+                onClick={() => {
+                  setOpenMenu(null);
+                  setSubMenu(null);
+                }}
+                className={menuItemClass}
+              >
+                <span className="flex items-center gap-2 text-[#f5a04a]">
+                  <Download className="w-3.5 h-3.5" />
+                  Download DangTree.OSV (Master 360)
+                </span>
+                <span style={{ color: theme.textDim }} className="text-[11px]">360 KB</span>
+              </a>
+
+              <a
+                href="/DangTree.LRF"
+                download="DangTree.LRF"
+                onClick={() => {
+                  setOpenMenu(null);
+                  setSubMenu(null);
+                }}
+                className={menuItemClass}
+              >
+                <span className="flex items-center gap-2 text-[#6fa8dc]">
+                  <Download className="w-3.5 h-3.5" />
+                  Download DangTree.LRF (Proxy Stream)
+                </span>
+                <span style={{ color: theme.textDim }} className="text-[11px]">262 KB</span>
+              </a>
+
               <button
                 onClick={() => trigger(onDownloadProjectArchive)}
                 className={menuItemClass}

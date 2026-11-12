@@ -20,7 +20,8 @@ import {
   FilePlus2,
   CheckCircle2,
   Music,
-  Play
+  Play,
+  Download
 } from 'lucide-react';
 import {
   OSVFileMetadata,
@@ -393,6 +394,19 @@ export const OrbisMediaPool: React.FC<OrbisMediaPoolProps> = ({
                               {item.resolution} · {item.fps} fps
                             </div>
                           </div>
+
+                          {/* Download icon if downloadable */}
+                          {item.videoUrl && (
+                            <a
+                              href={item.videoUrl}
+                              download={item.fileName}
+                              onClick={(e) => e.stopPropagation()}
+                              title={`Download ${item.fileName} (${item.fileSize})`}
+                              className="shrink-0 opacity-70 group-hover:opacity-100 p-1 hover:text-[#f5a04a] text-zinc-400 transition-opacity"
+                            >
+                              <Download className="w-3.5 h-3.5" />
+                            </a>
+                          )}
 
                           {/* Orange Checkmark Badge if on Timeline */}
                           <div className="shrink-0 self-start pt-0.5">
